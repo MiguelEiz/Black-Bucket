@@ -1,0 +1,16 @@
+res://scenes/black_bucket.tscn::c4a11a21de9047398beef6c1a7f25057::1769947684::res://.godot/exported/133200997/export-22bb155c5b64a33d8e6a32e08bc8fdb2-black_bucket.scn
+res://scenes/brush.tscn::6fc7756fb587c95fc52c954b93f79b60::1769944247::res://.godot/exported/133200997/export-f7c706301ef920cd25fc465d21ca85f8-brush.scn
+res://scenes/escena_principal.tscn::d5f63a6764e9432943ffe67d05fccbb4::1769952810::res://.godot/exported/133200997/export-d35ce47c29a1751725dc333b27154046-escena_principal.scn
+res://scenes/goal_platform.tscn::ced6babf28f716cf1911074e47b48d39::1769944247::res://.godot/exported/133200997/export-f20ce0ce923738cac2fd1567a5e3a08e-goal_platform.scn
+res://scenes/icono_escritorio_configuración.tscn::5150e7281419d07bedfcd937d9c64e78::1769946533::res://.godot/exported/133200997/export-a61054ad7755caa82f17647355506f0a-icono_escritorio_configuración.scn
+res://scenes/icono_escritorio_inicio.tscn::200f5c362777cee7a200d91a3a640792::1769946518::res://.godot/exported/133200997/export-f24ade9b11f7b289862d728b2673cb41-icono_escritorio_inicio.scn
+res://scenes/lvl_1.tscn::893428e3ec84d6835f0e68d729d00651::1769953616::res://.godot/exported/133200997/export-99d6508c13da7372a1e711fd74fdf01b-lvl_1.scn
+res://scenes/lvl_2.tscn::7b7abb273854cc1802ba2df49d8f93fa::1769947024::res://.godot/exported/133200997/export-7196343f5319ed31f72cfa5854208a10-lvl_2.scn
+res://scenes/lvl_3.tscn::4b1cbab981132ce84efb4b67306fe8cb::1769947455::res://.godot/exported/133200997/export-bffe0704a1d208b6ba09b5b1ada296cf-lvl_3.scn
+res://scenes/lvl_4.tscn::797acc54caad9fb7917174ebbe3e496a::1769949095::res://.godot/exported/133200997/export-f829def42c71f5fffea93fea9a8c7774-lvl_4.scn
+res://scenes/medidor_de_tinta.tscn::955c25f29a53ef58349f6fbb78bd2ff8::1769951830::res://.godot/exported/133200997/export-79ee51e54337e4bb0bf1b4ba8b242035-medidor_de_tinta.scn
+res://scenes/menu_de_inicio.tscn::be370df8bc7d7a22de7b5c78863f3fa5::1769946595::res://.godot/exported/133200997/export-3a0e2a8dde32f6ca6f4d9212e013d32c-menu_de_inicio.scn
+res://scenes/personaje.tscn::721bdfe8a34fdb155067ee7b8f5abdd4::1769944247::res://.godot/exported/133200997/export-09542a6559551c0496630ba4c061694c-personaje.scn
+res://scenes/starting_platform.tscn::cb492f2c434399daff5f11ed967a07bb::1769944247::res://.godot/exported/133200997/export-01d44a8633055b2f2026b394e43d0902-starting_platform.scn
+res://scenes/stikers.tscn::db307286a55d434ef5a45aa1199bbe8d::1769952850::res://.godot/exported/133200997/export-8534a8caf59c5a1de02d2e082e74a175-stikers.scn
+res://scenes/stiker_level1.tscn::5eb50eb1f0c1ce6d0785e810d8c661a0::1769952965::res://.godot/exported/133200997/export-7497ac28e4ebf827da1578cd1996cc31-stiker_level1.scn

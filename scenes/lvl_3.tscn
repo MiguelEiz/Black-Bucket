@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://bw0dof0xytieu"]
+
+[ext_resource type="Script" uid="uid://du3m17ph8rnnw" path="res://scripts/static_body_2d.gd" id="1_8t7b0"]
+[ext_resource type="Script" uid="uid://pxnt112v0g01" path="res://scripts/level_controller.gd" id="1_level"]
+[ext_resource type="Texture2D" uid="uid://dj8at2py2tc2f" path="res://assets/Expendedoras.PNG" id="1_xsimr"]
+[ext_resource type="Texture2D" uid="uid://cyf3ww584ikkm" path="res://assets/BITMAP.png" id="3_th8jk"]
+[ext_resource type="PackedScene" uid="uid://bcbiunarmavox" path="res://scenes/starting_platform.tscn" id="4_6a3rq"]
+[ext_resource type="PackedScene" uid="uid://bh8uxh0yexouc" path="res://scenes/personaje.tscn" id="4_53anu"]
+[ext_resource type="PackedScene" uid="uid://xd4yc2mkurex" path="res://scenes/brush.tscn" id="4_okdh5"]
+[ext_resource type="PackedScene" uid="uid://dcn7m4nq312yf" path="res://scenes/goal_platform.tscn" id="7_6a3rq"]
+[ext_resource type="PackedScene" uid="uid://dlqgyn4rvirei" path="res://scenes/black_bucket.tscn" id="9_tkm7p"]
+
+[node name="lvl3" type="Node2D" unique_id=98814041]
+script = ExtResource("1_level")
+level_number = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1187547299]
+position = Vector2(960, 540)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_xsimr")
+offset = Vector2(-110, 35)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1267639241]
+script = ExtResource("1_8t7b0")
+enable_colliders = true
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=543534747]
+visible = false
+position = Vector2(960, 540)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_th8jk")
+offset = Vector2(-110, 35)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1765802720]
+
+[node name="StartingPlatform" parent="." unique_id=918460869 instance=ExtResource("4_6a3rq")]
+position = Vector2(434, 693)
+
+[node name="GoalPlatform" parent="." unique_id=1101486411 instance=ExtResource("7_6a3rq")]
+position = Vector2(1383, 686)
+
+[node name="Personaje" parent="." unique_id=1466852636 instance=ExtResource("4_53anu")]
+position = Vector2(390, 733)
+scale = Vector2(0.25, 0.25)
+
+[node name="brush" parent="." unique_id=137154177 instance=ExtResource("4_okdh5")]
+paint_target_path = NodePath("../StaticBody2D")
+
+[node name="BlackBucket" parent="." unique_id=1178428112 instance=ExtResource("9_tkm7p")]
+position = Vector2(1308, 514)

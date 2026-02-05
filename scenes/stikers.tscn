@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://b358ycrb1fu21"]
+
+[ext_resource type="Texture2D" uid="uid://bs5plch07k6do" path="res://assets/Stickerarañita.png" id="1_f0g6r"]
+[ext_resource type="Texture2D" uid="uid://byyayajhvjdl7" path="res://assets/stiker2.png" id="2_0m8yh"]
+[ext_resource type="Texture2D" uid="uid://c3rugpr0tci17" path="res://assets/stiker3.png" id="3_fxf2t"]
+[ext_resource type="Texture2D" uid="uid://d1a8d3lbiswt4" path="res://assets/stiker1.png" id="4_8syey"]
+[ext_resource type="Texture2D" uid="uid://gces42vrxn5v" path="res://assets/stiker4.png" id="5_lpl0s"]
+
+[node name="stikers" type="Node2D" unique_id=2143236997]
+
+[node name="stiker1" type="Sprite2D" parent="." unique_id=970721648]
+z_index = 6
+position = Vector2(1404, 129)
+rotation = 0.01745329
+scale = Vector2(0.13796297, 0.13796297)
+texture = ExtResource("1_f0g6r")
+
+[node name="stiker2" type="Sprite2D" parent="." unique_id=52059530]
+z_index = 6
+position = Vector2(1708, 286.00006)
+rotation = -0.35430184
+scale = Vector2(0.060568906, 0.060568906)
+texture = ExtResource("2_0m8yh")
+
+[node name="stiker3" type="Sprite2D" parent="." unique_id=2141133917]
+z_index = 6
+position = Vector2(677.00006, 132)
+scale = Vector2(0.08656204, 0.08656204)
+texture = ExtResource("3_fxf2t")
+
+[node name="stiker4" type="Sprite2D" parent="." unique_id=784861832]
+z_index = 6
+position = Vector2(524.00006, 132.00002)
+scale = Vector2(0.068783715, 0.068783715)
+texture = ExtResource("4_8syey")
+
+[node name="stiker5" type="Sprite2D" parent="." unique_id=1280432488]
+z_index = 6
+position = Vector2(1656.2415, 944.7512)
+rotation = -0.5305801
+scale = Vector2(0.09925646, 0.09925646)
+texture = ExtResource("5_lpl0s")

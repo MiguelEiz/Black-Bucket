@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://duuvkl0kuhy5e"]
+
+[ext_resource type="Texture2D" uid="uid://cutf55t2188d7" path="res://assets/Fondo.png" id="1_knvo6"]
+[ext_resource type="Texture2D" uid="uid://c81tfbl7p48mc" path="res://assets/iPad sin.png" id="2_dommb"]
+[ext_resource type="PackedScene" uid="uid://c42swb6grbvft" path="res://scenes/icono_escritorio_inicio.tscn" id="3_kdnwc"]
+[ext_resource type="PackedScene" uid="uid://dw2m2pc3nim20" path="res://scenes/icono_escritorio_configuración.tscn" id="4_vtkaq"]
+
+[node name="MenuDeInicio" type="Node2D" unique_id=796705022]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1691502133]
+position = Vector2(966.75006, 590)
+scale = Vector2(0.83441186, 0.8)
+texture = ExtResource("1_knvo6")
+
+[node name="TabletSin" type="Sprite2D" parent="." unique_id=730368765]
+position = Vector2(960, 540)
+texture = ExtResource("2_dommb")
+
+[node name="IconoEscritorio" parent="." unique_id=1538197584 instance=ExtResource("3_kdnwc")]
+offset_left = 315.0
+offset_top = 232.0
+offset_right = 415.0
+offset_bottom = 348.0
+
+[node name="IconoEscritorioConfig" parent="." unique_id=843013700 instance=ExtResource("4_vtkaq")]
+offset_left = 315.0
+offset_top = 378.0
+offset_right = 406.0
+offset_bottom = 489.0

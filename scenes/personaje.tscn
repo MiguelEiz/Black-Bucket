@@ -1,0 +1,166 @@
+[gd_scene format=3 uid="uid://bh8uxh0yexouc"]
+
+[ext_resource type="Script" uid="uid://bbdtf1cm5yeek" path="res://scripts/personaje.gd" id="1_sydpl"]
+[ext_resource type="Texture2D" uid="uid://40ab87mnso24" path="res://sprites/uno.png" id="3_jt8tj"]
+[ext_resource type="Texture2D" uid="uid://dn6fsifr5fnnp" path="res://sprites/dos.png" id="4_im2y8"]
+[ext_resource type="Texture2D" uid="uid://dx0e83mg7n2y0" path="res://sprites/tres.png" id="5_h42ap"]
+[ext_resource type="Texture2D" uid="uid://eid3uokd6odx" path="res://sprites/cuatro.png" id="6_57ngn"]
+[ext_resource type="Texture2D" uid="uid://o2cefajkkxh7" path="res://sprites/impulse.png" id="7_h42ap"]
+[ext_resource type="Texture2D" uid="uid://bf2vthol3eshg" path="res://sprites/rununo.png" id="8_8xrj8"]
+[ext_resource type="Texture2D" uid="uid://nj3dd2qrnaua" path="res://sprites/air.png" id="8_57ngn"]
+[ext_resource type="AudioStream" uid="uid://d3hf24ptlngff" path="res://audio/run.wav" id="9_runwav"]
+[ext_resource type="Texture2D" uid="uid://wovaakdmhcfw" path="res://sprites/rundos.png" id="9_tbkpf"]
+[ext_resource type="Texture2D" uid="uid://d1lxs21rmy4sc" path="res://sprites/runtres.png" id="10_41mom"]
+[ext_resource type="AudioStream" uid="uid://dmgdep66gpqav" path="res://audio/jump.mp3" id="10_jumpmp3"]
+[ext_resource type="AudioStream" uid="uid://bjvjlrbxuudhm" path="res://audio/pop.ogg" id="11_popmp3"]
+[ext_resource type="Texture2D" uid="uid://crmvayvg6ppk6" path="res://sprites/spawn1.png" id="11_qjgqo"]
+[ext_resource type="Texture2D" uid="uid://dpvpw5yrtawy7" path="res://sprites/spawn2.png" id="12_3s3u2"]
+[ext_resource type="Texture2D" uid="uid://cp3pvkwcot4sd" path="res://sprites/spawn3.png" id="13_pes16"]
+[ext_resource type="Texture2D" uid="uid://vcsx0pmhcfsr" path="res://sprites/spawn4.png" id="14_3bdum"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tupa7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_jt8tj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_im2y8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_h42ap")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_57ngn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_h42ap")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_im2y8")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_h42ap")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_57ngn")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_8xrj8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_tbkpf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_tbkpf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_41mom")
+}],
+"loop": true,
+"name": &"run",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_pes16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_qjgqo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_3s3u2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_pes16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_3bdum")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_3bdum")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_3bdum")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_3bdum")
+}],
+"loop": false,
+"name": &"spawn",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_3bdum")
+}],
+"loop": true,
+"name": &"tusmuerto",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rexvr"]
+radius = 48.0
+height = 404.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3s3u2"]
+radius = 66.0
+height = 384.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pes16"]
+radius = 118.0
+height = 236.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3bdum"]
+size = Vector2(224, 324)
+
+[node name="Personaje" type="CharacterBody2D" unique_id=1466852636]
+z_index = 2
+scale = Vector2(0.5, 0.5)
+collision_layer = 2
+script = ExtResource("1_sydpl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1434285207]
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_tupa7")
+animation = &"jump"
+
+[node name="RunSound" type="AudioStreamPlayer" parent="." unique_id=1638472910]
+stream = ExtResource("9_runwav")
+
+[node name="JumpSound" type="AudioStreamPlayer" parent="." unique_id=1738472911]
+stream = ExtResource("10_jumpmp3")
+
+[node name="SpawnSound" type="AudioStreamPlayer" parent="." unique_id=1838472912]
+stream = ExtResource("11_popmp3")
+
+[node name="GritoSound" type="AudioStreamPlayer" parent="." unique_id=602151755]
+
+[node name="CollisionShapeIdle" type="CollisionShape2D" parent="." unique_id=844552623]
+visible = false
+position = Vector2(-12, -16)
+shape = SubResource("CapsuleShape2D_rexvr")
+
+[node name="CollisionShapeRun" type="CollisionShape2D" parent="." unique_id=1480283788]
+visible = false
+position = Vector2(34, -8)
+shape = SubResource("CapsuleShape2D_3s3u2")
+
+[node name="CollisionShapeJump" type="CollisionShape2D" parent="." unique_id=1626626983]
+visible = false
+position = Vector2(0, 74)
+shape = SubResource("CapsuleShape2D_pes16")
+
+[node name="CollisionShapeSpawn" type="CollisionShape2D" parent="." unique_id=760601894]
+position = Vector2(0, 24)
+shape = SubResource("RectangleShape2D_3bdum")

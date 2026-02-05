@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://dlqgyn4rvirei"]
+
+[ext_resource type="Script" uid="uid://bmir5to4bot0o" path="res://scripts/black_bucket.gd" id="1_ixouj"]
+[ext_resource type="Texture2D" uid="uid://dm8udrww3sm1h" path="res://sprites/quieto_cubo.PNG" id="2_0fmeo"]
+[ext_resource type="Texture2D" uid="uid://cp07d1by6pfc2" path="res://sprites/dos_cubo.PNG" id="3_e4niu"]
+[ext_resource type="Texture2D" uid="uid://daxbc2yqvommj" path="res://sprites/tres_cubo.PNG" id="4_alekf"]
+[ext_resource type="Texture2D" uid="uid://b4nvk40day44i" path="res://sprites/cuatro_cubo.PNG" id="5_dmlgv"]
+[ext_resource type="Texture2D" uid="uid://cf42iglj1eo67" path="res://sprites/cinco_cubo.PNG" id="6_61uls"]
+[ext_resource type="Texture2D" uid="uid://pembesyjh683" path="res://sprites/seis_cubo.PNG" id="7_nutbh"]
+[ext_resource type="Texture2D" uid="uid://ymq8nn5t01lb" path="res://sprites/siete_cubo.PNG" id="8_j5vh7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8xmdx"]
+atlas = ExtResource("2_0fmeo")
+region = Rect2(0, 0, 1048, 1048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lu30k"]
+atlas = ExtResource("3_e4niu")
+region = Rect2(0, 0, 1048, 1048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yvclr"]
+atlas = ExtResource("4_alekf")
+region = Rect2(0, 0, 1048, 1048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqlmg"]
+atlas = ExtResource("5_dmlgv")
+region = Rect2(0, 0, 1048, 1048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_05t8k"]
+atlas = ExtResource("6_61uls")
+region = Rect2(0, 0, 1048, 1048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lxdbs"]
+atlas = ExtResource("7_nutbh")
+region = Rect2(0, 0, 1048, 1048)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apsav"]
+atlas = ExtResource("8_j5vh7")
+region = Rect2(0, 0, 1048, 1048)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kc4y2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8xmdx")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lu30k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yvclr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqlmg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_05t8k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lxdbs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apsav")
+}],
+"loop": false,
+"name": &"run_away",
+"speed": 5.5
+}]
+
+[node name="BlackBucket" type="Node2D" unique_id=1178428112 groups=["black_bucket"]]
+script = ExtResource("1_ixouj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=56688740]
+position = Vector2(112, 103.00001)
+scale = Vector2(0.17418738, 0.18558371)
+sprite_frames = SubResource("SpriteFrames_kc4y2")
+animation = &"run_away"

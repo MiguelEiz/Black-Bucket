@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://hjvgkv35h5ae"]
+
+[ext_resource type="PackedScene" uid="uid://xd4yc2mkurex" path="res://scenes/brush.tscn" id="1_4dcfo"]
+[ext_resource type="Texture2D" uid="uid://ds78xexb1g04u" path="res://assets/MacaronsBitmap.png" id="1_4h067"]
+[ext_resource type="Texture2D" uid="uid://dutri1toqifxx" path="res://assets/Tuto2.png" id="1_k880e"]
+[ext_resource type="Texture2D" uid="uid://85jw1fvcd3j7" path="res://assets/iPad.png" id="1_svva4"]
+[ext_resource type="Script" uid="uid://du3m17ph8rnnw" path="res://scenes/static_body_2d.gd" id="2_4pgp8"]
+
+[node name="EscenaPrincipal" type="Node2D" unique_id=1425876862]
+
+[node name="brush" parent="." unique_id=308833729 instance=ExtResource("1_4dcfo")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1733451826]
+position = Vector2(960, 540)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_k880e")
+offset = Vector2(-110, 35)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=608621480]
+script = ExtResource("2_4pgp8")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1040035888]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1117612563]
+visible = false
+position = Vector2(960, 540)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_4h067")
+offset = Vector2(-110, 35)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2007358423]
+position = Vector2(960, 540)
+texture = ExtResource("1_svva4")

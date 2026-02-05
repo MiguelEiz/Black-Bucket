@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://b3nsewbcg0g5m"]
+
+[ext_resource type="Script" uid="uid://balxq7dmsai7u" path="res://scripts/medidor_de_tinta.gd" id="1_bdv8n"]
+[ext_resource type="Texture2D" uid="uid://dx7wkhtgmh1ya" path="res://assets/barra.PNG" id="2_wgtkm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wgtkm"]
+bg_color = Color(0.91228896, 0.9122889, 0.91228884, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="MedidorDeTinta" type="Control" unique_id=548390602]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 200.0
+offset_bottom = 80.0
+script = ExtResource("1_bdv8n")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1134855770]
+position = Vector2(-510, -252)
+scale = Vector2(1.2123367, 1.2097669)
+texture = ExtResource("2_wgtkm")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=953363266]
+layout_mode = 1
+offset_left = 10.0
+offset_top = 30.0
+offset_right = 190.0
+offset_bottom = 50.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_wgtkm")
+value = 100.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="." unique_id=142036409]
+visible = false
+layout_mode = 1
+offset_left = 10.0
+offset_top = 5.0
+offset_right = 190.0
+offset_bottom = 28.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 18
+text = "INK"

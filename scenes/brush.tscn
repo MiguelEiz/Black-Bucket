@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://xd4yc2mkurex"]
+
+[ext_resource type="Script" uid="uid://sy07aaik5id4" path="res://scripts/brush.gd" id="1_uvgru"]
+[ext_resource type="Texture2D" uid="uid://dcgs3hbxif8cg" path="res://assets/pincel.png" id="2_opa3j"]
+
+[node name="brush" type="Node2D" unique_id=308833729]
+z_index = 10
+script = ExtResource("1_uvgru")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1771905858]
+position = Vector2(74.00001, 108.000015)
+scale = Vector2(0.095, 0.095)
+texture = ExtResource("2_opa3j")

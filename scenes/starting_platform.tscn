@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bcbiunarmavox"]
+
+[ext_resource type="Texture2D" uid="uid://cxcrbluyssvot" path="res://assets/err.png" id="1_ikg0y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u8ilr"]
+size = Vector2(363.33328, 73.33325)
+
+[node name="StartingPlatform" type="StaticBody2D" unique_id=918460869]
+z_index = 2
+scale = Vector2(0.3, 0.3)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=245700789]
+position = Vector2(-106.666664, 369.99988)
+scale = Vector2(0.24382773, 0.31992158)
+texture = ExtResource("1_ikg0y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=835423761]
+position = Vector2(-105, 373.33325)
+shape = SubResource("RectangleShape2D_u8ilr")

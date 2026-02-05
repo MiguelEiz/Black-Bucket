@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://hjvgkv35h5ae"]
+
+[ext_resource type="Script" uid="uid://bkobqm2uue6oi" path="res://scripts/escena_principal.gd" id="1_main"]
+[ext_resource type="Texture2D" uid="uid://85jw1fvcd3j7" path="res://assets/iPad.png" id="1_svva4"]
+[ext_resource type="PackedScene" uid="uid://b358ycrb1fu21" path="res://scenes/stikers.tscn" id="2_4fspa"]
+[ext_resource type="PackedScene" uid="uid://b3nsewbcg0g5m" path="res://scenes/medidor_de_tinta.tscn" id="4_medidor"]
+[ext_resource type="AudioStream" uid="uid://dtw2kif6t1ont" path="res://audio/echoofsadness.mp3" id="5_4pgp8"]
+[ext_resource type="Script" uid="uid://wtrq4vb0hqar" path="res://scripts/color_picker.gd" id="5_color_picker"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4dcfo"]
+size = Vector2(198.5, 153.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4pgp8"]
+size = Vector2(160, 159)
+
+[node name="EscenaPrincipal" type="Node2D" unique_id=1425876862]
+script = ExtResource("1_main")
+
+[node name="stikers" parent="." unique_id=2143236997 instance=ExtResource("2_4fspa")]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2007358423]
+z_index = 5
+position = Vector2(960, 540)
+texture = ExtResource("1_svva4")
+
+[node name="MedidorDeTinta" parent="." unique_id=605782962 instance=ExtResource("4_medidor")]
+z_index = 200
+offset_left = 1450.0
+offset_top = 796.0
+offset_right = 1650.0
+offset_bottom = 876.0
+
+[node name="ColorPickerArea" type="Area2D" parent="." unique_id=1524688846]
+script = ExtResource("5_color_picker")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ColorPickerArea" unique_id=416041882]
+z_index = 6
+position = Vector2(1548.75, 288.375)
+shape = SubResource("RectangleShape2D_4dcfo")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="ColorPickerArea" unique_id=1090924976]
+z_index = 5
+position = Vector2(1514, 461.5)
+shape = SubResource("RectangleShape2D_4pgp8")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=854487552]
+stream = ExtResource("5_4pgp8")
+volume_db = -23.507

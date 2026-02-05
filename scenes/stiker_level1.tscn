@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://ca3lyhvnn8h6w"]
+
+[ext_resource type="Script" uid="uid://dhkqavad4cdjw" path="res://scripts/stiker.gd" id="1_rqols"]
+[ext_resource type="Texture2D" uid="uid://bs5plch07k6do" path="res://assets/Stickerarañita.png" id="2_t6p4v"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xinjc"]
+
+[node name="stiker" type="Area2D" unique_id=2104636109]
+collision_mask = 2
+script = ExtResource("1_rqols")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=124875736]
+scale = Vector2(0.08888889, 0.08888889)
+texture = ExtResource("2_t6p4v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2121615184]
+scale = Vector2(4.4444447, 4.4444447)
+shape = SubResource("CircleShape2D_xinjc")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

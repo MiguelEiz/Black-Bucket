@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dcn7m4nq312yf"]
+
+[ext_resource type="Script" uid="uid://rmw2tkj2oica" path="res://scripts/goal_platform.gd" id="1_at4d6"]
+[ext_resource type="Texture2D" uid="uid://02nic8aly0s2" path="res://assets/restore.png" id="1_ixc14"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_at4d6"]
+size = Vector2(132, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pjxw6"]
+size = Vector2(127, 7)
+
+[node name="GoalPlatform" type="StaticBody2D" unique_id=1101486411]
+z_index = 2
+script = ExtResource("1_at4d6")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1769872678]
+scale = Vector2(0.0873321, 0.09137938)
+texture = ExtResource("1_ixc14")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1946791570]
+shape = SubResource("RectangleShape2D_at4d6")
+
+[node name="WinArea" type="Area2D" parent="." unique_id=1255276815]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WinArea" unique_id=526213099]
+position = Vector2(-0.5, -9.5)
+shape = SubResource("RectangleShape2D_pjxw6")
